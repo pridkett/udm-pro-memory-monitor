@@ -17,3 +17,8 @@ Why would I need this? Well, one or more of the apps has a memory leak, which ma
 When this happens my whole network goes down for a few minutes as the UDM-Pro has to reboot. Maybe there's some switching that can happen for things that already have resolved ARP for local connections, but nothing else. Work meetings stop. And that's just not acceptable.
 
 This "fixes" the problem by logging into the UDM Pro on a regular basis and restarting the services if memory is below a given threshold.
+
+License
+-------
+
+MIT License
