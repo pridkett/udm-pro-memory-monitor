@@ -1,10 +1,10 @@
 ---
 # A lot of this was taken from justjanne/powerline-go
-name: Build
+name: CI/CD Build
 on: push
 jobs:
   release-linux:
-    name: Build release binaries for linux
+    name: "Linux: Build current code"
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -23,7 +23,7 @@ jobs:
           GOOS: linux
           GOARCH: ${{ matrix.arch }}
   release-macos:
-    name: Build release binaries for macOS
+    name: "MacOS: Build current code"
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -44,7 +44,7 @@ jobs:
           GOOS: darwin
           GOARCH: ${{ matrix.arch }}
   release-windows:
-    name: Build release binaries for windows
+    name: "Windows: Build current code"
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -65,7 +65,7 @@ jobs:
           GOOS: windows
           GOARCH: ${{ matrix.arch }}
   release-bsd:
-    name: Build release binaries for BSD
+    name: "BSD: Build Current Code"
     runs-on: ubuntu-latest
     strategy:
       matrix:
