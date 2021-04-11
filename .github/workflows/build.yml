@@ -9,7 +9,7 @@ jobs:
     strategy:
       matrix:
         arch: [ 'amd64', 'arm64', 'arm' ]
-        go-version: [ '1.11', '1.12', '1.13', '1.14', '1.15', '1.16' ]
+        go-version: [ '1.15', '1.16' ]
     steps:
       - name: Checkout the repository
         uses: actions/checkout@master
@@ -49,7 +49,7 @@ jobs:
     strategy:
       matrix:
         arch: [ 'amd64' ]
-        go-version: [ '1.12', '1.13', '1.14', '1.15', '1.16' ]
+        go-version: [ '1.15', '1.16' ]
         # arm64 for windows is disabled as it's not currently supported by the
         # go compiler for our use case
     steps:
@@ -71,7 +71,7 @@ jobs:
       matrix:
         arch: [ 'amd64' ]
         os: [ 'freebsd', 'netbsd', 'openbsd' ]
-        go-version: [ '1.12', '1.13', '1.14', '1.15', '1.16' ]
+        go-version: [ '1.15', '1.16' ]
     steps:
       - name: Checkout the repository
         uses: actions/checkout@master
