@@ -17,7 +17,7 @@ jobs:
         uses: actions/setup-go@v1
         with:
           go-version: ${{ matrix.go-version }}
-      - run: go build -o release/powerline-go-$GOOS-$GOARCH
+      - run: go build -o release/udm-pro-memory-monitor-$GOOS-$GOARCH
         env:
           CGO_ENABLED: 0
           GOOS: linux
@@ -38,7 +38,7 @@ jobs:
         uses: actions/setup-go@v1
         with:
           go-version: ${{ matrix.go-version }}
-      - run: go build -o release/powerline-go-$GOOS-$GOARCH
+      - run: go build -o release/udm-pro-memory-monitor-$GOOS-$GOARCH
         env:
           CGO_ENABLED: 0
           GOOS: darwin
@@ -59,7 +59,7 @@ jobs:
         uses: actions/setup-go@v1
         with:
           go-version: ${{ matrix.go-version }}
-      - run: go build -o release/powerline-go-$GOOS-$GOARCH
+      - run: go build -o release/udm-pro-memory-monitor-$GOOS-$GOARCH
         env:
           CGO_ENABLED: 0
           GOOS: windows
@@ -79,7 +79,7 @@ jobs:
         uses: actions/setup-go@v1
         with:
           go-version: ${{ matrix.go-version }}
-      - run: go build -o release/powerline-go-$GOOS-$GOARCH
+      - run: go build -o release/udm-pro-memory-monitor-$GOOS-$GOARCH
         env:
           CGO_ENABLED: 0
           GOOS: ${{ matrix.os }}
