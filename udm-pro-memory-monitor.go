@@ -27,9 +27,9 @@ func main() {
 	sshKeyPass := flag.String("keypass", "", "Password for SSH key if needed")
 	sshUseAgent := flag.Bool("agent", false, "Use SSH agent for authentication")
 	udmProPassword := flag.String("password", "", "Password for UDM Pro user account")
-	minMemoryAvailable := flag.Int64("memavailable", 200000, "minimum memory available in KB")
+	minMemoryAvailable := flag.Int64("memavailable", 524288, "minimum memory available in KB")
 	runAsDaemon := flag.Bool("daemon", false, "run the application in a loop")
-	daemonDelay := flag.Int("delay", 600, "delay between successive daemon calls")
+	daemonDelay := flag.Int("delay", 240, "delay between successive daemon calls")
 	flag.Parse()
 
 	if *udmProPassword == "" && *sshKey == "" && *sshUseAgent == false {
